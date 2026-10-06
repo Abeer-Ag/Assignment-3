@@ -1,1 +1,23 @@
+# Function Definition using 'def' keyword
+def check_right_triangle(side1, side2, side3):
+    # Calculate the squares of each side
+    sq1 = side1 * side1
+    sq2 = side2 * side2
+    sq3 = side3 * side3
 
+    # Check the Pythagorean theorem for all combinations
+    if (sq1 + sq2 == sq3) or (sq1 + sq3 == sq2) or (sq2 + sq3 == sq1):
+        print("Yes, the given sides form a right-angled triangle.")
+    else:
+        print("No, the given sides do NOT form a right-angled triangle.")
+
+# Main program starts here
+print("--- Check Right-Angled Triangle ---")
+
+# Accept the length of three sides of a triangle as inputs from the user
+s1 = int(input("Enter length of side 1: "))
+s2 = int(input("Enter length of side 2: "))
+s3 = int(input("Enter length of side 3: "))
+
+# Function Calling
+check_right_triangle(s1, s2, s3)
